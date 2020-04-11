@@ -9,7 +9,8 @@ class Container extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      selected: []
+      selected: [],
+      selectAllSelected: false
     };
   }
   handleListOnClick = option => event => {
@@ -22,16 +23,23 @@ class Container extends PureComponent {
   };
 
   handleRemoveSelected = index => event => {
-    console.log(index);
     const { selected } = this.state;
     const array = [...selected];
     array.splice(index, 1);
     this.setState({ selected: array });
   };
 
+  handleSelectAll = event => {
+    const { options } = this.props;
+    event.target.checked
+      ? this.setState({ selected: options })
+      : this.setState({ selected: [] });
+    this.setState({ selectAllSelected: event.target.checked });
+  };
+
   render() {
     const { options } = this.props;
-    const { selected } = this.state;
+    const { selected, selectAllSelected } = this.state;
     return (
       <div className="container">
         <div className="container__dropdown">
@@ -43,6 +51,8 @@ class Container extends PureComponent {
             options={options}
             handleListOnClick={this.handleListOnClick}
             selected={selected}
+            handleSelectAll={this.handleSelectAll}
+            selectAllSelected={selectAllSelected}
           />
         </div>
       </div>
