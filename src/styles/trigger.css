@@ -29,15 +29,15 @@
 }
 
 .caret-close{
-    border-top: 4px solid black;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+    border-top: 8px solid rgba(0, 153, 255, 0.995);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
 }
 
 .caret-open{
-    border-bottom: 4px solid black;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+    border-bottom: 8px solid rgba(0, 153, 255, 0.995);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
 }
 
 .trigger__selected {

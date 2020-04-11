@@ -22,15 +22,43 @@
     cursor: pointer;
 }
 
-.select-all {
+.list__select-all {
     font-weight: 600;
     border: 1px solid rgba(27, 31, 35, 0.2);
     border-left: none;
     border-top:none;
-    position: fixed;
     width: inherit;
 }
 
 .list__wrapper {
-    margin-top: 43px;
+    margin-top: 86px;
+}
+
+.list__fixed{
+    position: fixed;
+    height: 86px;
+    width: inherit;
+}
+
+.list__search{
+    font-weight: 600;
+    border: 1px solid rgba(27, 31, 35, 0.2);
+    border-left: none;
+    border-top:none;
+    width: inherit;
+    padding: 0px 12px;
+    line-height: 43px;
+}
+
+.list__search > input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    width: 250px;
+    font-size: 16px;
+}
+
+.list__search > input:focus {
+    outline: none;
 }

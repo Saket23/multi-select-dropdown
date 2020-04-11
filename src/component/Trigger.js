@@ -1,9 +1,14 @@
 import React from "react";
 import "../styles/trigger.css";
 
-const Trigger = ({ selected, onChange, isListOpen, handleRemoveSelected }) => {
+const Trigger = ({
+  selected,
+  isDropdownVisible,
+  handleRemoveSelected,
+  setIsDropdownVisible
+}) => {
   return (
-    <div className="trigger">
+    <div className="trigger" onClick={setIsDropdownVisible}>
       <div className="trigger__selected">
         {selected &&
           selected.map((data, index) => (
@@ -18,7 +23,9 @@ const Trigger = ({ selected, onChange, isListOpen, handleRemoveSelected }) => {
           ))}
       </div>
       <div className="trigger__caret">
-        <span className={isListOpen ? "caret-open" : "caret-close"}></span>
+        <span
+          className={isDropdownVisible ? "caret-close" : "caret-open"}
+        ></span>
       </div>
     </div>
   );
