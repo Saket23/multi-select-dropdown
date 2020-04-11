@@ -1,0 +1,22 @@
+.list {
+    border: 1px solid rgba(27, 31, 35, 0.2);
+    border-top: none;
+    width: inherit;
+    border-radius: 3px;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    box-shadow: 5px 5px 2px -3px rgba(0,0,0,0.75);
+    height: 400px;
+    overflow: scroll;
+    position: absolute;
+    z-index: 10;
+}
+
+.list__item{
+    padding: 12px;
+}
+
+.list__item > input{
+    margin-right: 20px;
+    cursor: pointer;
+}
